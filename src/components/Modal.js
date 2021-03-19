@@ -42,8 +42,8 @@ export default class AddModal extends Component {
           onOk={this.props.type === 'Add' ? () => this.onOk() : () => this.onEdit()}
           onCancel={() => this.onClose()}
         >
-          <div style={{justifyContent: "center", alignItems: "center"}}>
-            <Input key='Header' style={{ margin: 8 }} value={this.state.title} placeholder="Todo Title" name='title' onChange={this.setValue} onChange={this.handleChange} />
+          <div style={{justifyContent: "center", alignItems: "center" }}>
+            <Input style={{ margin: 8 }} value={this.state.title} placeholder="Todo Title" name='title'onChange={this.handleChange} />
             <TextArea
               key='Description'
               value={this.state.description}

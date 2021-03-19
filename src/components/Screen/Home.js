@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Modal, Button } from "antd";
+import { Button } from "antd";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import "./home.scss";
 import AddModal from "../Modal";
@@ -109,10 +109,12 @@ export default class Home extends Component {
     let tempValue = this.state.todos;
     
     var tempIndex = 0;
-    tempValue.map((element,index) => {
+    tempValue.forEach((element,index) => {
       if(element.id === value.id){
         tempIndex = index;
+      
       }
+      
     })
     console.log(tempIndex);
     tempValue[tempIndex].title = value.title;
